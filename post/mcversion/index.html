@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[清韵blog备用站]的个人博客">
+<meta name="author" content="kveln">
+<title>MC服务器各种核心的粗略介绍 | 清韵blog备用站</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="MC服务器各种核心的粗略介绍 | 清韵blog备用站 » Feed"
+  href="https://blog.qingyundrive.top/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://blog.qingyundrive.top/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<script type="text/javascript">
+  function show_runtime() {
+      window.setTimeout("show_runtime()", 1000);
+      X = new Date("10/05/2018 00:00:00");
+      Y = new Date();
+      T = (Y.getTime() - X.getTime());
+      M = 24 * 60 * 60 * 1000;
+      a = T / M;
+      A = Math.floor(a);
+      b = (a - A) * 24;
+      B = Math.floor(b);
+      c = (b - B) * 60;
+      C = Math.floor((b - B) * 60);
+      D = Math.floor((c - C) * 60);
+      runtime_span.innerHTML = "本小站已安全运行: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+  }
+  show_runtime();
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+<script>hljs.initHighlightingOnLoad();</script>
+
+  <meta property="og:description" content="MC服务器各种核心的粗略介绍" />
+  <meta property="og:url" content="https://blog.qingyundrive.top/post/mcversion/" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="清韵blog备用站" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://blog.qingyundrive.top">清韵blog备用站</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">归档</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">标签</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/post/about">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1689946068611"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://blog.qingyundrive.top">清韵blog备用站</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">归档</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">标签</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/post/about">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1689946068611"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://api.btstu.cn/sjbz/api.php')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+              </span>
+              <h1>MC服务器各种核心的粗略介绍</h1>
+              <span class="meta">
+                Posted on
+                2023-07-21，5 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <p><strong>Minecraft服务端核心介绍大全</strong></p>
+<p>注：部分服务端第一次运行时会自动下载相关文件。<br>
+一下为所需内容：</p>
+<h2 id="javajdk下载">Java/JDK下载：</h2>
+<p>JDK/JRE8:<a href="https://www.java.com/zh-CN/">https://www.java.com/zh-CN/</a><br>
+其他版本JAVA下载：<a href="https://www.oracle.com/cn/java/technologies/downloads/">https://www.oracle.com/cn/java/technologies/downloads/</a></p>
+<h2 id="我的世界服务端下载">我的世界服务端下载</h2>
+<h3 id="paperspigot">PaperSpigot</h3>
+<p>Spigot 的进一步优化版本，在相关算法方面，较 Spigot 有所提高，优化 TPS 等，支持 CraftBukkit 和 Spigot 插件，API 没有太大修改。</p>
+<p>在 1.9 版本之前都带有反作弊功能，1.9 之后的版本需要自行安装其他反作弊插件。</p>
+<p><strong>paper官网：<a href="https://papermc.io">https://papermc.io/</a></strong></p>
+<h3 id="mohist">Mohist</h3>
+<p>Mohist 是一个全新的 Minecraft Forge 服务端，基于 1.12.2/1.16.5/1.7.10/1.18 下，核心采用 Forge + Paper 结构，开发环境使用 ForgeGradle，支持 Forge mod 和 Paper 系列插件。Mohist 目前稳定性良好，仍在不断更新。<br>
+光下载了 Mohist 核心是不能够直接运行的你还需要其他的准备(站长反正是没整明白需要的可以尝试下度娘)<br>
+<strong>Mohist官网：</strong><a href="https://mohistmc.com/">https://mohistmc.com/</a></p>
+<h3 id="catserver">CatServer</h3>
+<p>CatServer是1.12.2的Forge+Bukkit+Spigot服务端核心<br>
+国内最早开发的高版本核心, 支持大部分MOD和插件同时稳定运行（自行研究或者度娘）<br>
+<strong>GitHub地址：</strong><a href="https://github.com/Luohuayu/CatServer">https://github.com/Luohuayu/CatServer</a></p>
+<h3 id="minecraft-server">Minecraft Server</h3>
+<p>Minecraft Server 是 Mojang 官方制作的原版服务端，更新非常快，基本上和 Minecraft 客户端版本同时发布，不能安装任何 Mod 和插件，只能够使用原版的命令和物品，适合基友服联机使用。（现在站长正在用的）</p>
+<p><strong>全版本下载地址：</strong><a href="https://mcversions.net/">https://mcversions.net/</a></p>
+<h3 id="akarin">Akarin</h3>
+<p>Akarin 是一款支持多线程的 Minecraft 服务端，来自 “新维度”，前身是 TorchSpigot 服务端。</p>
+<p>作为一个 Paper 的分支, 它支持 Spigot 能使用的几乎所有插件.</p>
+<p><strong>GitHub地址：</strong><a href="https://link.zhihu.com/?target=https%3A//url.zeruns.tech/Akarin_GitHub">https://github.com/Akarin-project/Akarin</a></p>
+<h3 id="bedrock-server">Bedrock Server</h3>
+<p>Bedrock 是 Minecraft PE 基岩版，也叫携带版或手机版，Bedrock Server 是 Mojang 官方提供的服务端。</p>
+<p>Bedrock Server 不能安装插件，只能用于纯净游戏联机使用。支持多平台联机。</p>
+<p><strong>官网：</strong><a href="https://www.minecraft.net/en-us/download/server/bedrock/">https://www.minecraft.net/en-us/download/server/bedrock/</a></p>
+<h3 id="bungeecord">BungeeCord</h3>
+<p>BungeeCord 是一个高性能的反向代理服务端，它可以将多个 Minecraft 服务器变成一个 “群组服务器”。</p>
+<p><strong>使用介绍：</strong><a href="https://link.zhihu.com/?target=https%3A//url.zeruns.tech/O0KHk">http://www.mcbbs.net/thread-424117-1-1.html</a></p>
+<p><strong>Github 项目：</strong><a href="https://link.zhihu.com/?target=https%3A//url.zeruns.tech/T9UrL">https://github.com/SpigotMC/BungeeCord</a></p>
+<p><strong>Bungeecord-1478：</strong><a href="https://link.zhihu.com/?target=https%3A//url.zeruns.tech/Bungeecord_1478">https://url.zeruns.tech/Bungeecord_1478</a></p>
+<h3 id="cuberite">CubeRite</h3>
+<p>CubeRite 是一个基于 C++ 编写的开源高性能 Minecraft 服务端，支持 1.8 到 1.12.2 版本。</p>
+<p>目前 Cuberite 已经可以做到大部分的基于 Bukkit 架构的 Minecraft 服务端（例如 Spigot）的功能，并且在性能方面具有更大的优势。</p>
+<p><strong>Github 项目：</strong><a href="https://github.com/cuberite/cuberite">https://github.com/cuberite/cuberite</a></p>
+<h3 id="glowstone">GlowStone</h3>
+<p>GlowStone 萤石是一款开源的 Bukkit 服务端，开发者可以根据自己需求修改或制作一个服务端，内置了 Sponge 支持的插件。</p>
+<p><strong>官网：</strong><a href="https://glowstone.net/">https://glowstone.net/</a></p>
+<h3 id="dragonproxy">DragonProxy</h3>
+<p>DragonProxy 龙代理是一个高性能的反向代理服务端，其功能类似于 BungeeCord，但是它的作用是让电脑和手机一起联机！</p>
+<p><strong>GitHub 项目：</strong><a href="https://github.com/DragonetMC/DragonProxy">https://github.com/DragonetMC/DragonProxy</a></p>
+<h3 id="hose">Hose</h3>
+<p>Hose 是一款开源的多线程 Minecraft 服务端，性能更强。</p>
+<p><strong>Github 项目：</strong><a href="https://github.com/softpak/HOSE">https://github.com/softpak/HOSE</a></p>
+<h3 id="nukkitnukkitx">Nukkit/NukkitX</h3>
+<p>Nukkit 是一款由 Java 驱动的 Minecraft PE 基岩版服务端，适合开一个多人联机的 PE 版本服务器。</p>
+<p>NukkitX 应该是 Nukkit 的强化 / 后续版本，这是一个高性能的 Minecraft PE 基岩版服务器，由 Java 强力驱动。</p>
+<p><strong>官网：</strong><a href="https://cloudburstmc.org/">https://cloudburstmc.org/</a></p>
+<h3 id="pocketmine-mp">PocketMine-MP</h3>
+<p>PocketMine-MP 是一个用 PHP 开发的 Minecraft Bedrock 基岩版服务端，也是目前使用最为广泛的服务端之一。</p>
+<p>因为高可扩展性和插件编写起来相对简易，深受广大手机版服主喜爱。</p>
+<p><strong>GitHub 项目：</strong><a href="https://github.com/pmmp/PocketMine-MP">https://github.com/pmmp/PocketMine-MP</a></p>
+<h3 id="spigot">Spigot</h3>
+<p>Spigot 是 CraftBukkit 服务端之后的延续版本，比 CraftBukkit 优化了不少地方，支持 CraftBukkit 的插件，性能比 CraftBukkit 好很多，并且自带反作弊功能(站长正在探索感觉性能可以)</p>
+<p><strong>官网：</strong><a href="https://www.spigotmc.org/">https://www.spigotmc.org/</a></p>
+<h3 id="sponge-forge">Sponge Forge</h3>
+<p>Sponge 是一个全新的服务端，支持 Sponge 的专用插件，可装 Mod，兼容性比 Cauldron 相比提高了不少，适合开 MOD 服，支持的版本非常高，是目前支持 MOD 的服务端里兼容版本最高的服务端。</p>
+<p>但是 Sponge 本身不支持 Bukkit 插件（即使有兼容层，效果也不是很好，只能支持一般的插件），需要服务器的配置比较高，启动速度不佳。</p>
+<p><strong>spongeforge-1.12.2-2838-7.1.7-RC3848：</strong><a href="https://url.zeruns.tech/spongeforge">https://url.zeruns.tech/spongeforge</a></p>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#javajdk%E4%B8%8B%E8%BD%BD">Java/JDK下载：</a></li>
+<li><a href="#%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%8B%E8%BD%BD">我的世界服务端下载</a>
+<ul>
+<li><a href="#paperspigot">PaperSpigot</a></li>
+<li><a href="#mohist">Mohist</a></li>
+<li><a href="#catserver">CatServer</a></li>
+<li><a href="#minecraft-server">Minecraft Server</a></li>
+<li><a href="#akarin">Akarin</a></li>
+<li><a href="#bedrock-server">Bedrock Server</a></li>
+<li><a href="#bungeecord">BungeeCord</a></li>
+<li><a href="#cuberite">CubeRite</a></li>
+<li><a href="#glowstone">GlowStone</a></li>
+<li><a href="#dragonproxy">DragonProxy</a></li>
+<li><a href="#hose">Hose</a></li>
+<li><a href="#nukkitnukkitx">Nukkit/NukkitX</a></li>
+<li><a href="#pocketmine-mp">PocketMine-MP</a></li>
+<li><a href="#spigot">Spigot</a></li>
+<li><a href="#sponge-forge">Sponge Forge</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://blog.qingyundrive.top/post/zw3djiaocheng/">
+              <span class="post-title">
+                中望3D全版本安装教程&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+
+            
+            
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '4d924dfbdc61fe11321b',
+    clientSecret: '64e97f97b3a613e7455598f8bf666a9232a24afa',
+    repo: 'community',
+    owner: '4399qianye',
+    admin: ['4399qianye'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://blog.qingyundrive.top/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted"><font color="#00E0FF">Copyright &copy;<span>清韵blog备用站</span><br><a href="https://www.qingyundrive.top:9996" class="Themeinfo">Powered by 清韵</a></font></p>
+        </div>
+      </div>
+    </div>
+    <h2 class="copyright text-muted"><font color="#00FF00"><span id="runtime_span"></span></font></h2>
+    <p class="copyright text-muted"><script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JmsBIpEBo1XMHYeT/quote.js?theme=#33D279,#F19E03,#10B80D,#CFEE03,#FFFFFF,#33D279,18&amp;f=18"></script></p>
+
+    
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://blog.qingyundrive.top/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://blog.qingyundrive.top/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <div id="landlord-parent">
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        //移动端
+        console.log("------ 移动端");
+    } else {
+        console.log("------ PC端 " + navigator.userAgent);
+
+        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
+            // 加载完成后再loadlive2d
+            loadlive2d("live2d", "https://blog.qingyundrive.top/media/live2d/assets/tororo.model.json");
+        });
+
+        var home_Path = "https://blog.qingyundrive.top/";
+        addScript("https://blog.qingyundrive.top/media/live2d/js/message.js", () => { });
+    }
+
+    // 插入js文件，完成后callback
+    function addScript(jsfile, callback) {
+        var landlord_parent = document.getElementById("landlord-parent");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsfile;
+        landlord_parent.appendChild(script);
+        script.onload = script.onreadystatechange = function () {
+            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                script.onload = script.onreadystatechange = null;
+                if (callback && typeof callback == "function") {
+                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
+                }
+            }
+        };
+    }
+</script>
+  
+  <script src="https://blog.qingyundrive.top/media/scripts/tocScript.js"></script>
+</body>
+
+</html>

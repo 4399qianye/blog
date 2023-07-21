@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="referrer" content="never">
+<meta name="keywords" content="">
+<meta name="description" content="欢迎访问[清韵blog备用站]的个人博客">
+<meta name="author" content="kveln">
+<title>如何使用Cloudflare隐藏您的端口号[失效] | 清韵blog备用站</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link
+  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+  rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/rss+xml" title="如何使用Cloudflare隐藏您的端口号[失效] | 清韵blog备用站 » Feed"
+  href="https://blog.qingyundrive.top/atom.xml">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.10/build/styles/androidstudio.min.css">
+<link href="https://blog.qingyundrive.top/styles/main.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+
+<script type="text/javascript">
+  function show_runtime() {
+      window.setTimeout("show_runtime()", 1000);
+      X = new Date("10/05/2018 00:00:00");
+      Y = new Date();
+      T = (Y.getTime() - X.getTime());
+      M = 24 * 60 * 60 * 1000;
+      a = T / M;
+      A = Math.floor(a);
+      b = (a - A) * 24;
+      B = Math.floor(b);
+      c = (b - B) * 60;
+      C = Math.floor((b - B) * 60);
+      D = Math.floor((c - C) * 60);
+      runtime_span.innerHTML = "本小站已安全运行: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+  }
+  show_runtime();
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/css/live2d.css">
+<script>hljs.initHighlightingOnLoad();</script>
+
+  <meta property="og:description" content="如何使用Cloudflare隐藏您的端口号[失效]" />
+  <meta property="og:url" content="https://blog.qingyundrive.top/post/cloudflare-Hidden-port/" />
+  <meta property="og:locale" content="zh-CN" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="清韵blog备用站" />
+  <!-- <script src="../assets/styles/scripts/tocScript.js"></script> -->
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://blog.qingyundrive.top">清韵blog备用站</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">归档</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">标签</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/post/about">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1689946068611"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- Page Header -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://blog.qingyundrive.top">清韵blog备用站</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/">首页</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/archives">归档</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/tags">标签</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          
+          <a class="nav-link" href="/post/about">关于</a>
+          
+        </li>
+        
+        <li class="nav-item">
+          <div class="gridea-search-container">
+            <form id="gridea-search-form" style="position: relative" data-update="1689946068611"
+              action="/search/index.html">
+              <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+              <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead" style="background-image: url('https://api.btstu.cn/sjbz/api.php')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+          <!-- 没Title为其他页面Header -->
+          
+            <!-- 没Title并且有headerType为Post：文章Header -->
+            <div class="post-heading">
+              <span class="tags">
+                
+                <a href="https://blog.qingyundrive.top/tag/w60NoJ_Y1/" class="tag">教程</a>
+                
+              </span>
+              <h1>如何使用Cloudflare隐藏您的端口号[失效]</h1>
+              <span class="meta">
+                Posted on
+                2023-01-10，2 min read
+              </span>
+            </div>
+          
+        
+      </div>
+    </div>
+  </div>
+</header>
+  <!-- Post Content -->
+  <article id="post-content-article">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto post-content-container">
+          
+          <h1 id="使用目的">使用目的</h1>
+<p>让你的云服务器的IP不再暴露在公网并且在某些场合需要端口号时可直接忽略。</p>
+<!-- TOC -->
+<ul>
+<li><a href="#%E4%BD%BF%E7%94%A8%E7%9B%AE%E7%9A%84">使用目的</a>
+<ul>
+<li><a href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">准备工作</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B">开始</a></li>
+<li><a href="#%E6%9F%A5%E9%AA%8C%E8%AE%B0%E5%BD%95%E7%94%9F%E6%95%88">查验记录生效</a></li>
+<li><a href="#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B">视频教程</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h1 id="准备工作">准备工作</h1>
+<h2 id="所需材料">所需材料</h2>
+<ul>
+<li>手</li>
+<li>脑子</li>
+<li>域名</li>
+<li>云服务器（用运营商的家宽也可以就是不能藏IP）</li>
+<li>Cloudflare账号</li>
+</ul>
+<h1 id="开始">开始</h1>
+<ul>
+<li>1.打开我们的云服务器找到自己的公网IP并且去Cloudflare添加A解析，解析到我们的服务器<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221214067616.png" alt="" loading="lazy"></li>
+<li>2.等待PING出IP地址为泛播Cloudflare即可（不行的话按住WIN+R，输入CMD 在里面输入IPCONFIG /FLUSHDNS 后重试）<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221214467012.png" alt="" loading="lazy"></li>
+<li>3.我们回到Cloudflare添加SRV解析，后面的权重抄下就行了，至于协议TCP/UDP自己选<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221215578775.png" alt="" loading="lazy"></li>
+<li>4.完成添加记录后等待记录值生效即可！（我等了1个小时）</li>
+</ul>
+<h1 id="查验记录生效">查验记录生效</h1>
+<ul>
+<li>按住WIN+R打开cmd</li>
+<li>输入nslookup -q=srv +你的记录(红圈里框起来的)<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221216227452.png" alt="" loading="lazy"></li>
+<li>如果不行请更换DNS重试！直至出现下图代表记录已经生效：<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221217062623.png" alt="" loading="lazy"></li>
+</ul>
+<h1 id="视频教程">视频教程</h1>
+<p>https://www.bilibili.com/video/BV1kd4y1j7Fn/</p>
+
+          <div class="toc-container"><ul class="markdownIt-TOC">
+<li><a href="#%E4%BD%BF%E7%94%A8%E7%9B%AE%E7%9A%84">使用目的</a></li>
+<li><a href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">准备工作</a>
+<ul>
+<li><a href="#%E6%89%80%E9%9C%80%E6%9D%90%E6%96%99">所需材料</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BC%80%E5%A7%8B">开始</a></li>
+<li><a href="#%E6%9F%A5%E9%AA%8C%E8%AE%B0%E5%BD%95%E7%94%9F%E6%95%88">查验记录生效</a></li>
+<li><a href="#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B">视频教程</a></li>
+</ul>
+</div>
+          
+          <hr />
+          <p class="next-post">下一篇：
+            <a href="https://blog.qingyundrive.top/post/html-tiao-zhuan-ye-mian/">
+              <span class="post-title">
+                html跳转页面&rarr;
+              </span>
+            </a>
+          </p>
+          
+          <div class="comment" style="text-align: center;">
+            
+
+            
+            
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '4d924dfbdc61fe11321b',
+    clientSecret: '64e97f97b3a613e7455598f8bf666a9232a24afa',
+    repo: 'community',
+    owner: '4399qianye',
+    admin: ['4399qianye'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+  </article>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+              <!-- <li class="list-inline-item">
+              <a href="https://blog.qingyundrive.top/atom.xml" target="_blank">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              </li> -->
+          </ul>
+          <p class="copyright text-muted"><font color="#00E0FF">Copyright &copy;<span>清韵blog备用站</span><br><a href="https://www.qingyundrive.top:9996" class="Themeinfo">Powered by 清韵</a></font></p>
+        </div>
+      </div>
+    </div>
+    <h2 class="copyright text-muted"><font color="#00FF00"><span id="runtime_span"></span></font></h2>
+    <p class="copyright text-muted"><script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JmsBIpEBo1XMHYeT/quote.js?theme=#33D279,#F19E03,#10B80D,#CFEE03,#FFFFFF,#33D279,18&amp;f=18"></script></p>
+
+    
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://blog.qingyundrive.top/media/scripts/bootstrap.bundle.min.js"></script> -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/Alanrk/clean-cdn@1.0/scripts/clean-blog.min.js"></script>
+  <!-- <script src="https://blog.qingyundrive.top/media/scripts/clean-blog.min.js"></script> -->
+  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <style type="text/css">a.back_to_top{text-decoration:none;position:fixed;bottom:40px;right:30px;background:#f0f0f0;height:40px;width:40px;border-radius:50%;line-height:36px;font-size:18px;text-align:center;transition-duration:.5s;transition-propety:background-color;display:none}a.back_to_top span{color:#888}a.back_to_top:hover{cursor:pointer;background:#dfdfdf}a.back_to_top:hover span{color:#555}@media print,screen and(max-width:580px){.back_to_top{display:none!important}}</style>
+<a id="back_to_top" href="#" class="back_to_top">
+  <span>▲</span></a>
+<script>$(document).ready((function(_this) {
+    return function() {
+      var bt;
+      bt = $('#back_to_top');
+      if ($(document).width() > 480) {
+        $(window).scroll(function() {
+          var st;
+          st = $(window).scrollTop();
+          if (st > 30) {
+            return bt.css('display', 'block')
+          } else {
+            return bt.css('display', 'none')
+          }
+        });
+        return bt.click(function() {
+          $('body,html').animate({
+            scrollTop: 0
+          },
+          800);
+          return false
+        })
+      }
+    }
+  })(this));</script>
+  
+  <div id="landlord-parent">
+    <div id="landlord">
+        <div class="message" style="opacity:0"></div>
+        <canvas id="live2d" width="240" height="250" class="live2d"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+        //移动端
+        console.log("------ 移动端");
+    } else {
+        console.log("------ PC端 " + navigator.userAgent);
+
+        addScript("https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/live2d.js", () => {
+            // 加载完成后再loadlive2d
+            loadlive2d("live2d", "https://blog.qingyundrive.top/media/live2d/assets/tororo.model.json");
+        });
+
+        var home_Path = "https://blog.qingyundrive.top/";
+        addScript("https://blog.qingyundrive.top/media/live2d/js/message.js", () => { });
+    }
+
+    // 插入js文件，完成后callback
+    function addScript(jsfile, callback) {
+        var landlord_parent = document.getElementById("landlord-parent");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = jsfile;
+        landlord_parent.appendChild(script);
+        script.onload = script.onreadystatechange = function () {
+            if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+                script.onload = script.onreadystatechange = null;
+                if (callback && typeof callback == "function") {
+                    callback(); //window[callback]();如果传递字符串过来 调用window['函数名']() 调用方法
+                }
+            }
+        };
+    }
+</script>
+  
+  <script src="https://blog.qingyundrive.top/media/scripts/tocScript.js"></script>
+</body>
+
+</html>

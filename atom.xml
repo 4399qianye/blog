@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://blog.qingyundrive.top</id>
+    <title>清韵blog备用站</title>
+    <updated>2023-07-21T13:28:16.167Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://blog.qingyundrive.top"/>
+    <link rel="self" href="https://blog.qingyundrive.top/atom.xml"/>
+    <subtitle>清韵blog,新一代免费资源分享平台，网络各种资源免费分享！</subtitle>
+    <logo>https://blog.qingyundrive.top/images/avatar.png</logo>
+    <icon>https://blog.qingyundrive.top/favicon.ico</icon>
+    <rights>All rights reserved 2023, 清韵blog备用站</rights>
+    <entry>
+        <title type="html"><![CDATA[MC服务器各种核心的粗略介绍]]></title>
+        <id>https://blog.qingyundrive.top/post/mcversion/</id>
+        <link href="https://blog.qingyundrive.top/post/mcversion/">
+        </link>
+        <updated>2023-07-21T13:16:54.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>Minecraft服务端核心介绍大全</strong></p>
+<p>注：部分服务端第一次运行时会自动下载相关文件。<br>
+一下为所需内容：</p>
+<h2 id="javajdk下载">Java/JDK下载：</h2>
+<p>JDK/JRE8:<a href="https://www.java.com/zh-CN/">https://www.java.com/zh-CN/</a><br>
+其他版本JAVA下载：<a href="https://www.oracle.com/cn/java/technologies/downloads/">https://www.oracle.com/cn/java/technologies/downloads/</a></p>
+<h2 id="我的世界服务端下载">我的世界服务端下载</h2>
+<h3 id="paperspigot">PaperSpigot</h3>
+<p>Spigot 的进一步优化版本，在相关算法方面，较 Spigot 有所提高，优化 TPS 等，支持 CraftBukkit 和 Spigot 插件，API 没有太大修改。</p>
+<p>在 1.9 版本之前都带有反作弊功能，1.9 之后的版本需要自行安装其他反作弊插件。</p>
+<p><strong>paper官网：<a href="https://papermc.io">https://papermc.io/</a></strong></p>
+<h3 id="mohist">Mohist</h3>
+<p>Mohist 是一个全新的 Minecraft Forge 服务端，基于 1.12.2/1.16.5/1.7.10/1.18 下，核心采用 Forge + Paper 结构，开发环境使用 ForgeGradle，支持 Forge mod 和 Paper 系列插件。Mohist 目前稳定性良好，仍在不断更新。<br>
+光下载了 Mohist 核心是不能够直接运行的你还需要其他的准备(站长反正是没整明白需要的可以尝试下度娘)<br>
+<strong>Mohist官网：</strong><a href="https://mohistmc.com/">https://mohistmc.com/</a></p>
+<h3 id="catserver">CatServer</h3>
+<p>CatServer是1.12.2的Forge+Bukkit+Spigot服务端核心<br>
+国内最早开发的高版本核心, 支持大部分MOD和插件同时稳定运行（自行研究或者度娘）<br>
+<strong>GitHub地址：</strong><a href="https://github.com/Luohuayu/CatServer">https://github.com/Luohuayu/CatServer</a></p>
+<h3 id="minecraft-server">Minecraft Server</h3>
+<p>Minecraft Server 是 Mojang 官方制作的原版服务端，更新非常快，基本上和 Minecraft 客户端版本同时发布，不能安装任何 Mod 和插件，只能够使用原版的命令和物品，适合基友服联机使用。（现在站长正在用的）</p>
+<p><strong>全版本下载地址：</strong><a href="https://mcversions.net/">https://mcversions.net/</a></p>
+<h3 id="akarin">Akarin</h3>
+<p>Akarin 是一款支持多线程的 Minecraft 服务端，来自 “新维度”，前身是 TorchSpigot 服务端。</p>
+<p>作为一个 Paper 的分支, 它支持 Spigot 能使用的几乎所有插件.</p>
+<p><strong>GitHub地址：</strong><a href="https://link.zhihu.com/?target=https%3A//url.zeruns.tech/Akarin_GitHub">https://github.com/Akarin-project/Akarin</a></p>
+<h3 id="bedrock-server">Bedrock Server</h3>
+<p>Bedrock 是 Minecraft PE 基岩版，也叫携带版或手机版，Bedrock Server 是 Mojang 官方提供的服务端。</p>
+<p>Bedrock Server 不能安装插件，只能用于纯净游戏联机使用。支持多平台联机。</p>
+<p><strong>官网：</strong><a href="https://www.minecraft.net/en-us/download/server/bedrock/">https://www.minecraft.net/en-us/download/server/bedrock/</a></p>
+<h3 id="bungeecord">BungeeCord</h3>
+<p>BungeeCord 是一个高性能的反向代理服务端，它可以将多个 Minecraft 服务器变成一个 “群组服务器”。</p>
+<p><strong>使用介绍：</strong><a href="https://link.zhihu.com/?target=https%3A//url.zeruns.tech/O0KHk">http://www.mcbbs.net/thread-424117-1-1.html</a></p>
+<p><strong>Github 项目：</strong><a href="https://link.zhihu.com/?target=https%3A//url.zeruns.tech/T9UrL">https://github.com/SpigotMC/BungeeCord</a></p>
+<p><strong>Bungeecord-1478：</strong><a href="https://link.zhihu.com/?target=https%3A//url.zeruns.tech/Bungeecord_1478">https://url.zeruns.tech/Bungeecord_1478</a></p>
+<h3 id="cuberite">CubeRite</h3>
+<p>CubeRite 是一个基于 C++ 编写的开源高性能 Minecraft 服务端，支持 1.8 到 1.12.2 版本。</p>
+<p>目前 Cuberite 已经可以做到大部分的基于 Bukkit 架构的 Minecraft 服务端（例如 Spigot）的功能，并且在性能方面具有更大的优势。</p>
+<p><strong>Github 项目：</strong><a href="https://github.com/cuberite/cuberite">https://github.com/cuberite/cuberite</a></p>
+<h3 id="glowstone">GlowStone</h3>
+<p>GlowStone 萤石是一款开源的 Bukkit 服务端，开发者可以根据自己需求修改或制作一个服务端，内置了 Sponge 支持的插件。</p>
+<p><strong>官网：</strong><a href="https://glowstone.net/">https://glowstone.net/</a></p>
+<h3 id="dragonproxy">DragonProxy</h3>
+<p>DragonProxy 龙代理是一个高性能的反向代理服务端，其功能类似于 BungeeCord，但是它的作用是让电脑和手机一起联机！</p>
+<p><strong>GitHub 项目：</strong><a href="https://github.com/DragonetMC/DragonProxy">https://github.com/DragonetMC/DragonProxy</a></p>
+<h3 id="hose">Hose</h3>
+<p>Hose 是一款开源的多线程 Minecraft 服务端，性能更强。</p>
+<p><strong>Github 项目：</strong><a href="https://github.com/softpak/HOSE">https://github.com/softpak/HOSE</a></p>
+<h3 id="nukkitnukkitx">Nukkit/NukkitX</h3>
+<p>Nukkit 是一款由 Java 驱动的 Minecraft PE 基岩版服务端，适合开一个多人联机的 PE 版本服务器。</p>
+<p>NukkitX 应该是 Nukkit 的强化 / 后续版本，这是一个高性能的 Minecraft PE 基岩版服务器，由 Java 强力驱动。</p>
+<p><strong>官网：</strong><a href="https://cloudburstmc.org/">https://cloudburstmc.org/</a></p>
+<h3 id="pocketmine-mp">PocketMine-MP</h3>
+<p>PocketMine-MP 是一个用 PHP 开发的 Minecraft Bedrock 基岩版服务端，也是目前使用最为广泛的服务端之一。</p>
+<p>因为高可扩展性和插件编写起来相对简易，深受广大手机版服主喜爱。</p>
+<p><strong>GitHub 项目：</strong><a href="https://github.com/pmmp/PocketMine-MP">https://github.com/pmmp/PocketMine-MP</a></p>
+<h3 id="spigot">Spigot</h3>
+<p>Spigot 是 CraftBukkit 服务端之后的延续版本，比 CraftBukkit 优化了不少地方，支持 CraftBukkit 的插件，性能比 CraftBukkit 好很多，并且自带反作弊功能(站长正在探索感觉性能可以)</p>
+<p><strong>官网：</strong><a href="https://www.spigotmc.org/">https://www.spigotmc.org/</a></p>
+<h3 id="sponge-forge">Sponge Forge</h3>
+<p>Sponge 是一个全新的服务端，支持 Sponge 的专用插件，可装 Mod，兼容性比 Cauldron 相比提高了不少，适合开 MOD 服，支持的版本非常高，是目前支持 MOD 的服务端里兼容版本最高的服务端。</p>
+<p>但是 Sponge 本身不支持 Bukkit 插件（即使有兼容层，效果也不是很好，只能支持一般的插件），需要服务器的配置比较高，启动速度不佳。</p>
+<p><strong>spongeforge-1.12.2-2838-7.1.7-RC3848：</strong><a href="https://url.zeruns.tech/spongeforge">https://url.zeruns.tech/spongeforge</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中望3D全版本安装教程]]></title>
+        <id>https://blog.qingyundrive.top/post/zw3djiaocheng/</id>
+        <link href="https://blog.qingyundrive.top/post/zw3djiaocheng/">
+        </link>
+        <updated>2023-06-26T00:54:29.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li><a href="#%E8%AF%B4%E6%98%8E">说明</a></li>
+<li><a href="#%E9%85%8D%E5%A5%97%E8%BD%AF%E4%BB%B6%E5%8C%85">配套软件包</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B">安装教程</a></li>
+</ul>
+<h1 id="说明">说明</h1>
+<p><code>1、有关安装时期使用的硬件，请参考《测试环境》 2随着便件的升级，我们不保证此教程一定适用于之前或者之后的系统版本。3教程均在原版系统下制作。受电脑内已安装软件数量、版本影响，截图内容未必一定与您实际安装内容完全 致。请以安装结果作为判断依据。 4、如无特殊说明，我们默认您正在使用管理员账户操作，或者您拥有管理员密码。 5、如无特殊说明，我们默认您的计算机已经联网。 </code></p>
+<h1 id="适配软件包">适配软件包</h1>
+<p>此目录下所有ZW3D开头软件包 https://app.qingyunltd.eu.org:8443/%E4%B8%AD%E6%9C%9B3D</p>
+<h1 id="安装教程">安装教程</h1>
+<p>《中望3D全版本通用教程》<br>
+安装过程<br>
+<code>本文以《中望3D 2023 直装特别版》进行演示，之前的中望3D直装版其安装流程一致。</code><br>
+<code>**如果本机装有卡巴斯基，请在安装前暂停其防护，否则有可能会出现进程被终止的情况**</code><br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260900469579.png" alt="" loading="lazy"><br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260901346120.png" alt="" loading="lazy"></p>
+<ol>
+<li>解压相关软件包。</li>
+<li>以管理员身份运行“开始安装.exe“。<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260900135806.png" alt="" loading="lazy"></li>
+<li>勾选左下角的“同意”复选框。<code>*早期版本可以不用以管理员身份安装，但为减少翻车几率，我们仍然建议手动以管理员身份运行。</code><br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260903552537.png" alt="" loading="lazy"></li>
+<li>点击上方的“浏览”，可修改安装目录。修改完毕后，点击“下一步”继续。<code>软件一定不能安装在C盘</code>勾上同意协议后点击“立即安装”</li>
+<li>点击立即安装并耐心等待......</li>
+<li>正在安装中，请耐心等待......<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260906387662.png" alt="" loading="lazy"></li>
+<li>安装完成，点击“完成”退出安装程序<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260908282794.png" alt="" loading="lazy"><br>
+<strong><code>不要点击“激活”和“启动”。此时许可证信息还没写进系统!</code></strong></li>
+<li>关闭安装程序后，会弹出一个对话框，表示激活完毕。此时可以正常使用中望3D了。<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260911457989.png" alt="" loading="lazy"><br>
+<strong><span style="color: red;">本文作者不对使用以上资源所造成的一切后果负责！请各位悉知！</span></strong></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中望CAD 2023(标准、机械、建筑版) 轻度精简直装]]></title>
+        <id>https://blog.qingyundrive.top/post/zwcad2023jiaocheng/</id>
+        <link href="https://blog.qingyundrive.top/post/zwcad2023jiaocheng/">
+        </link>
+        <updated>2023-06-26T00:38:23.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li><a href="#%E8%AF%B4%E6%98%8E">说明</a></li>
+<li><a href="#%E9%85%8D%E5%A5%97%E8%BD%AF%E4%BB%B6%E5%8C%85">配套软件包</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B">安装教程</a></li>
+</ul>
+<h1 id="说明">说明</h1>
+<p><code>1、有关安装时期使用的硬件，请参考《测试环境》 2随着便件的升级，我们不保证此教程一定适用于之前或者之后的系统版本。3教程均在原版系统下制作。受电脑内已安装软件数量、版本影响，截图内容未必一定与您实际安装内容完全 致。请以安装结果作为判断依据。 4、如无特殊说明，我们默认您正在使用管理员账户操作，或者您拥有管理员密码。 5、如无特殊说明，我们默认您的计算机已经联网。 </code></p>
+<h1 id="适配软件包">适配软件包</h1>
+<ol>
+<li>https://app.qingyunltd.eu.org:8443/d/%E4%B8%AD%E6%9C%9BCAD/ZWCADA_2023_SP2_Chs_Lite.rar?sign=Rhfl7rTooskeIb5QHeKJGldAEu-3s3OSm6-mrRAF7xU=:4572645543</li>
+<li>https://app.qingyunltd.eu.org:8443/d/%E4%B8%AD%E6%9C%9BCAD/ZWCADM_2023_SP2_Chs_Lite.rar?sign=IAxy9T2dReRnk3BOg6UHapxVmTF34kvQzskcAnlyMI0=:4572645567</li>
+<li>https://app.qingyunltd.eu.org:8443/d/%E4%B8%AD%E6%9C%9BCAD/ZWCAD_2023_SP2_Chs_Lite.rar?sign=z4bSC5ycaOIJzs85RE-bu6hpMWqObMAZF2IUcI3GjIg=:4572645586</li>
+</ol>
+<h1 id="安装教程">安装教程</h1>
+<p>《中望CAD标准版/机械版/建筑版 2023 简体中文纯净版》<br>
+安装过程<br>
+<code>本文以《中望CAD 2023机械版 简体中文纯净版》进行演示，《中望CAD 2023 简体中文纯净版》与其安装流程 。</code></p>
+<ol>
+<li>
+<p>解压相关软件包。</p>
+</li>
+<li>
+<p>双击运行Setup.exe。<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260846315796.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>点击上方的“浏览”，可修改安装目录。修改完毕后，点击“下一步”继续。<code>软件一定不能安装在C盘</code>勾上同意协议后点击“立即安装”<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260846541699.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>正在安装耐心等待......<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260847219831.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>安装完成，可以在上方选择您需要的界面模式 (默认经典，可选Ribbon)<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-26/2306260851014886.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>点击“完成”结束安装或点击“启动”直接打开软件。</p>
+</li>
+<li>
+<p>若出现以下对话框(2023版本弹窗相同)请跳转之第16步，否则请继续执行第10步<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251013406466.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>在开始菜单中找到并打开“许可证管理器<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251016033303.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>点击“激活许可证”<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251016441142.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>依次点击“浮动许可”-“仅配置不查询’<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251017121029.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>在“服务器名称”处输入“localhost”或“127.0.0.1”。端口号根据自己实际情况修改。输入完毕后，点击“激活“<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251017376743.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>点击“完成”<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251017591784.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>确认出现许可证信息后点击“退出”<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251018213190.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>返回桌面快捷方式即可打开中望CAD2023/中望CAD2023机械版/中望CAD2023建筑版<br>
+<strong><span style="color: red;">本文作者不对使用以上资源所造成的一切后果负责！请各位悉知！</span></strong></p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[中望CAD 2024(标准、机械、建筑版) 轻度精简直装]]></title>
+        <id>https://blog.qingyundrive.top/post/zwcad2024jiaocheng/</id>
+        <link href="https://blog.qingyundrive.top/post/zwcad2024jiaocheng/">
+        </link>
+        <updated>2023-06-25T01:16:36.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li><a href="#%E8%AF%B4%E6%98%8E">说明</a></li>
+<li><a href="#%E9%85%8D%E5%A5%97%E8%BD%AF%E4%BB%B6%E5%8C%85">配套软件包</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B">安装教程</a></li>
+</ul>
+<h1 id="说明">说明</h1>
+<p><code>1、有关安装时期使用的硬件，请参考《测试环境》 2随着便件的升级，我们不保证此教程一定适用于之前或者之后的系统版本。3教程均在原版系统下制作。受电脑内已安装软件数量、版本影响，截图内容未必一定与您实际安装内容完全 致。请以安装结果作为判断依据。 4、如无特殊说明，我们默认您正在使用管理员账户操作，或者您拥有管理员密码。 5、如无特殊说明，我们默认您的计算机已经联网。 </code></p>
+<h1 id="适配软件包">适配软件包</h1>
+<p><code>1. https://app.qingyunltd.eu.org:8443/d/%E4%B8%AD%E6%9C%9BCAD/ZWCADA_2024_Chs_Lite.rar?sign=yKUMHy_lYuF_OR51TvWtwR1-6VOs47q76endhdOSHKk=:4572606874 2.https://app.qingyunltd.eu.org:8443/d/%E4%B8%AD%E6%9C%9BCAD/ZWCADM_2024_Chs_Lite.rar?sign=h7-GLSwg1kajYsh-RGN_awFqNSvVqdhWXIKyPYt5rZM=:4572606973 3.https://app.qingyunltd.eu.org:8443/d/%E4%B8%AD%E6%9C%9BCAD/ZWCAD_2024_Chs_Lite.rar?sign=TbIkiehkK0KDVb-5ptOiAyLNqZEn9Uvw1uqgj0kYZ_A=:4572606982</code></p>
+<h1 id="安装教程">安装教程</h1>
+<p>《中望CAD标准版/机械版/建筑版 2024 简体中文轻度精简直装版》<br>
+安装过程<br>
+<code>本文以《中望CAD 2024机械版》进行演示，标准版和建筑版与其安装流程一致</code></p>
+<ol>
+<li>解压相关软件包。</li>
+<li>双击运行Setup.exe。<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251003539828.jpg" alt="" loading="lazy"></li>
+<li>点击上方的“浏览”，可修改安装目录。修改完毕后，点击“下一步”继续。<code>软件一定不能安装在C盘</code><br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251005218607.jpg" alt="" loading="lazy"></li>
+<li>浏览完协议后点击灰色的“同意并安装”<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251010019784.jpg" alt="" loading="lazy"></li>
+<li>在弹出的对话框中再次点击“同意并安装”<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251011069472.jpg" alt="" loading="lazy"></li>
+<li>正在安装耐心等待......<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251011473273.jpg" alt="" loading="lazy"></li>
+<li>安装完成，可以在上方选择您需要的界面模式 (默认经典，可选Ribbon)<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251012488965.jpg" alt="" loading="lazy"></li>
+<li>点击“完成”结束安装或点击“启动”直接打开软件。</li>
+<li>若出现以下对话框请跳转之第16步，否则请继续执行第10步<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251013406466.jpg" alt="" loading="lazy"></li>
+<li>在开始菜单中找到并打开“许可证管理器<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251016033303.jpg" alt="" loading="lazy"></li>
+<li>点击“激活许可证”<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251016441142.jpg" alt="" loading="lazy"></li>
+<li>依次点击“浮动许可”-“仅配置不查询’<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251017121029.jpg" alt="" loading="lazy"></li>
+<li>在“服务器名称”处输入“localhost”或“127.0.0.1”。端口号根据自己实际情况修改。输入完毕后，点击“激活“<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251017376743.jpg" alt="" loading="lazy"></li>
+<li>点击“完成”<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251017591784.jpg" alt="" loading="lazy"></li>
+<li>确认出现许可证信息后点击“退出”<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-06-25/2306251018213190.jpg" alt="" loading="lazy"></li>
+<li>返回桌面快捷方式即可打开中望CAD2024/中望CAD2024机械版/中望CAD2024建筑版<br>
+<strong><span style="color: red;">本文作者不对使用以上资源所造成的一切后果负责！请各位悉知！</span></strong></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于主站点关闭说明]]></title>
+        <id>https://blog.qingyundrive.top/post/2023-05-06-16-06/</id>
+        <link href="https://blog.qingyundrive.top/post/2023-05-06-16-06/">
+        </link>
+        <updated>2023-05-06T08:14:26.000Z</updated>
+        <content type="html"><![CDATA[<p>主站点:community.qingyundrive.top由于域名原因暂时停止解析，故本站部分图片可能受影响！待问题解决后方可进行解析</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[利用Clouflare反向代理隐藏端口[亲测有效]]]></title>
+        <id>https://blog.qingyundrive.top/post/cfdaili/</id>
+        <link href="https://blog.qingyundrive.top/post/cfdaili/">
+        </link>
+        <updated>2023-04-21T13:04:04.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li><a href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">准备工作</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B%E5%AE%9E%E8%B7%B5">开始实践</a></li>
+<li><a href="#CNAME%E8%A7%A3%E6%9E%90%E6%B7%BB%E5%8A%A0%E5%B7%AE%E5%BC%82">CNAME解析添加差异</a></li>
+<li><a href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E4%B8%8E%E5%BB%BA%E8%AE%AE">异常处理与建议</a></li>
+</ul>
+<h1 id="准备工作">准备工作</h1>
+<ol>
+<li>一个域名</li>
+<li>Cloudflare账号</li>
+<li>公网服务器或者家里的NAS</li>
+</ol>
+<h1 id="开始实践">开始实践</h1>
+<ol>
+<li>打开Cloudflare官网并登录<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-04-21/2304210847525100.png" alt="" loading="lazy"></li>
+<li>选择我们要添加解析的域名<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-04-21/2304210848481273.png" alt="" loading="lazy"></li>
+<li>进入域名详细界面后点击DNS<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-04-21/2304210850004884.png" alt="" loading="lazy"></li>
+<li>按照正常域名解析记录添加方法进行添加，小云朵必须是橙色（即代理状态为已代理）不清楚的可以看图（此处以IPV4为例）<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-04-21/2304210851408432.png" alt="" loading="lazy"></li>
+<li>我们点击左侧菜单栏中的规则，找到Origin Rules并点击<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-04-21/2304210853287908.png" alt="" loading="lazy"></li>
+<li>点击创建规则<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-04-21/2304210854141759.png" alt="" loading="lazy"></li>
+<li>随后填写规则名称（随便写）、字段选择主机名，运算符选择等于，后面的值填写我们刚才添加DNS记录的名称+域名本体，例如：刚才添加的记录名称为：www,域名为jiyuqy.ml那么此处应该填写:www.jiyuqy.ml{不懂的可以看图}<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-04-21/2304210858071640.png" alt="" loading="lazy"><br>
+访问网址查看是否成功<br>
+<strong>我这边等了大概有5分钟左右</strong>具体也没准.</li>
+</ol>
+<h1 id="cname解析添加差异">CNAME解析添加差异</h1>
+<p>话不多说看图：<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-04-21/2304210902562337.png" alt="" loading="lazy"></p>
+<h1 id="异常处理">异常处理</h1>
+<p>还没遇到过，如果有尝试下魔法，看看是不是被墙了<br>
+建议：配合DDNS-GO使用更佳！（前提是你得有个付费买的域名）<br>
+实在解决不了的联系q：2591260990<br>
+图片有问题的，无法放大的请前往主站点查看！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[清韵云APP上线啦！[主站点也在哦！]]]></title>
+        <id>https://blog.qingyundrive.top/post/QingYunAPP/</id>
+        <link href="https://blog.qingyundrive.top/post/QingYunAPP/">
+        </link>
+        <updated>2023-02-25T10:36:10.000Z</updated>
+        <content type="html"><![CDATA[<h1>通知</h1>
+清韵云APP全新发行，目前暂未出现某些地区不可用！先这样了，站长上学去了！！拜~！
+<h2>下载地址</h2>
+https://community.qingyundrive.top/download/]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[精品404网站改版源码]]></title>
+        <id>https://blog.qingyundrive.top/post/jing-pin-404/</id>
+        <link href="https://blog.qingyundrive.top/post/jing-pin-404/">
+        </link>
+        <updated>2023-01-19T02:20:41.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="前言">前言</h2>
+<p>这个网页源码是站长在网上找到的,要用到的可以免费拿去，侵权删。</p>
+<h4 id="预览图">预览图</h4>
+<p><img src="https://www.qingyundrive.top:9996/usr/uploads/2022/07/1737632531.png" alt="屏幕截图 2022-07-06 215717.png" loading="lazy"><br>
+是这个点实测的:2022-07-06 22:03:32 星期三</p>
+<h6 id="文件下载地址">文件下载地址：</h6>
+<p>https://www.qingyundrive.top:9996/archives/75/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[大学习秒过方法(全平台适用)]]></title>
+        <id>https://blog.qingyundrive.top/post/daxueximiaoguo/</id>
+        <link href="https://blog.qingyundrive.top/post/daxueximiaoguo/">
+        </link>
+        <updated>2023-01-18T12:13:38.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="前言">前言</h1>
+<p>众所周知，当我们完成某大学习时总会觉得麻烦，所以经过几次测试发现一个共同点，并且站长亲测可用（全平台适用哦）<br>
+<s><strong>苹果手机的出去</strong></s></p>
+<h2 id="教程开始"><strong>教程开始</strong></h2>
+<ol>
+<li>打开公众号，点击大学习<br>
+<img src="https://www.qingyundrive.top:83/upload/2022/12/9/ef067adb-c93e-4705-8d94-8676109465d2.jpg" alt="图片名称" loading="lazy"></li>
+<li>按照平常做大学习的流程一直进行，直到需要选择地区为止<br>
+<img src="https://www.qingyundrive.top:83/upload/2022/12/9/ad04ad77-9893-4d7a-be87-0072134064a8.jpg" alt="图片名称" loading="lazy"></li>
+<li>点击右上方3个点，<strong>选择在浏览器打开</strong><br>
+<img src="https://www.qingyundrive.top:83/upload/2022/12/9/9faa8dd6-11ef-4497-87a7-c4395fe42524.jpg" alt="图片名称" loading="lazy"><br>
+4.在浏览器中打开后，点击网址，选择复制(<s>如果你手不抖也可以不用</s>)<br>
+<img src="https://www.qingyundrive.top:83/upload/2022/12/9/6609a40a-57a5-4ca9-bc58-2c409d85dee5.jpg" alt="图片名称" loading="lazy"><br>
+5.删除杠后面的*.html，改成images/end.jpg<br>
+<img src="https://www.qingyundrive.top:83/upload/2022/12/9/02458fb0-cc26-4475-b7a8-4cab2b86a9bd.jpg" alt="图片名称" loading="lazy"><br>
+6.访问修改完成的网址，即可秒过<br>
+<img src="https://www.qingyundrive.top:83/upload/2022/12/9/3d4e7cbe-b399-45a8-991b-880eb346d3ef.jpg" alt="图片名称" loading="lazy"></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[苹果CMSv10仿B站带手机模板]]></title>
+        <id>https://blog.qingyundrive.top/post/maccmsv10-bzhan/</id>
+        <link href="https://blog.qingyundrive.top/post/maccmsv10-bzhan/">
+        </link>
+        <updated>2023-01-17T07:16:31.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="声名">声名：</h2>
+<p>该模板是一款非常漂亮的模板，是在网络上找到的，在此分享一下。</p>
+<h1 id="安装教程">安装教程</h1>
+<p>下载上传至网站目录template文件里进行解压<br>
+苹果cms后台配置：<br>
+自定义快捷菜单：B站主题设置,/template/b/admin<br>
+B为PC端模板，B-NEW为WAP端模板</p>
+<h3 id="预览图">预览图</h3>
+<figure data-type="image" tabindex="1"><img src="https://www.qingyundrive.top:9996/usr/uploads/2022/06/2644006829.jpg" alt="1459737389.jpg" loading="lazy"></figure>
+<h4 id="文件下载">文件下载</h4>
+<p>https://www.qingyundrive.top:9996/archives/29/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[清韵安卓&apple APP正式发行]]></title>
+        <id>https://blog.qingyundrive.top/post/qyapp-found/</id>
+        <link href="https://blog.qingyundrive.top/post/qyapp-found/">
+        </link>
+        <updated>2023-01-16T12:25:21.000Z</updated>
+        <content type="html"><![CDATA[<h1>清韵博客主站点的安卓&苹果客户端正式发行！届时各位可直接通过客户端进行操作！各个功能均已完善！欢迎下载体验！<h1>
+# 下载地址
+https://www.qingyundrive.top:9996/download/]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[群晖NAS使用Docker安装DDNS-GO]]></title>
+        <id>https://blog.qingyundrive.top/post/qunhui-ddns-go/</id>
+        <link href="https://blog.qingyundrive.top/post/qunhui-ddns-go/">
+        </link>
+        <updated>2023-01-15T11:54:14.000Z</updated>
+        <content type="html"><![CDATA[<ul>
+<li><a href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">准备工作</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B%E5%AE%9E%E8%B7%B5">开始实践</a></li>
+<li><a href="#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B">视频教程</a></li>
+<li><a href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86">异常处理</a></li>
+</ul>
+<h1 id="准备工作">准备工作</h1>
+<ol>
+<li>一台群晖NAS</li>
+<li>稳定的网络连接</li>
+<li>手</li>
+<li>脑子</li>
+<li>电脑（可选，只要能访问到群晖web管理的都行）</li>
+</ol>
+<h1 id="开始实践">开始实践</h1>
+<ol>
+<li>打开群晖管理页面并登陆<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211134172584.png" alt="" loading="lazy"></li>
+<li>打开套件中心<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211136267754.png" alt="" loading="lazy"></li>
+<li>在套件中心的搜索框中输入Docker并安装<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211139375791.png" alt="" loading="lazy"></li>
+<li>安装好Docker后打开Docker并点击注册表，在注册表中的搜索框中输入DDNS随后搜索<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211140227734.png" alt="" loading="lazy"></li>
+<li>找到作者为JEESSY的ddns-go脚本点击安装，选择安装所需的版本(推荐latest)<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211141501389.png" alt="" loading="lazy"></li>
+<li>等待脚本安装完成<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211142408729.png" alt="" loading="lazy"></li>
+<li>在脚本安装完成后选择并运行容器<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211143269795.png" alt="" loading="lazy"></li>
+<li>在该容器处右键选择详细信息查看其中的本地端口<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211144476015.png" alt="" loading="lazy"><br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211145231474.png" alt="" loading="lazy"></li>
+<li>使用群晖NAS的IP地址+本地端口进行访问</li>
+<li><strong> 配置DDNS-GO（这里不做演示）</strong>看之前的DDNS-GO教程，里面有写！</li>
+</ol>
+<h1 id="视频教程">视频教程</h1>
+<p>B站链接：https://www.bilibili.com/video/BV1UA411d7bv/</p>
+<h1 id="异常处理">异常处理</h1>
+<p>作者没遇到过，可以试试重启NAS</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[让你的博客下大雪吧！]]></title>
+        <id>https://blog.qingyundrive.top/post/snowy/</id>
+        <link href="https://blog.qingyundrive.top/post/snowy/">
+        </link>
+        <updated>2023-01-14T06:21:31.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="本文中的代码可在电脑端正确显示">本文中的代码可在电脑端正确显示</h1>
+<h1 id="引言">引言</h1>
+<p>本操作适用于冬天的时候添加，甚是美丽，大雪纷飞。</p>
+<h1 id="适配对象">适配对象</h1>
+<p>适用所有网站。<br>
+前提是必须加载jQuery文件。<br>
+没有加载jq的在head标签里加上这段js</p>
+<pre><code>&lt;script src=&quot;https://code.jquery.com/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt; ```
+</code></pre>
+<p>把js文件上传到自己服务器(js文件在文末下载)，然后把这段代码放到你想飘雪的页面。</p>
+<pre><code>       &lt;div class=&quot;snow-container&quot; style=&quot;position:fixed;top:0;left:0;width:100%;height:100%;pointer-
+     events:none;z-index:100001;&quot;&gt;&lt;/div&gt;
+     &lt;script type=&quot;text/javascript&quot; src=&quot;你放js文件的路径/snow.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h1 id="使用方法-怕麻烦的用这个">使用方法 (怕麻烦的用这个)</h1>
+<p><strong>第一种</strong></p>
+<pre><code>&lt;script src=&quot;http://www.lmlblog.com/winter/templets/xq/js/snowy.js&quot;&gt;&lt;/script&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    .snow-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:100001;}&lt;/style&gt;
+    &lt;div class=&quot;snow-container&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>第二种</strong></p>
+<pre><code>     &lt;script src=&quot;http://www.lmlblog.com/winter/templets/xq/js/snowy.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;http://www.lmlblog.com/blog/12/js/Snow.js&quot;&gt;&lt;/script&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    .snow-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:100001;}
+    &lt;/style&gt;
+    &lt;div class=&quot;snow-container&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>第三种</strong></p>
+<pre><code>&lt;script src=&quot;http://www.lmlblog.com/winter/templets/xq/js/snowy.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;http://www.lmlblog.com/blog/14/js/Snow.js&quot;&gt;&lt;/script&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    .snow-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:100001;}
+    &lt;/style&gt;
+    &lt;div class=&quot;snow-container&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p><strong>第四种</strong></p>
+<pre><code>&lt;script src=&quot;http://www.lmlblog.com/winter/templets/xq/js/snowy.js&quot;&gt;&lt;/script&gt;
+     &lt;script src=&quot;http://www.lmlblog.com/blog/12/js/Snow.js&quot;&gt;&lt;/script&gt;
+     &lt;style type=&quot;text/css&quot;&gt;
+     .snow-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-
+     index:100001;}
+     &lt;/style&gt;
+     &lt;div class=&quot;snow-container&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h2 id="文件下载">文件下载：</h2>
+<p>https://www.qingyundrive.top:9996/archives/24/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[好看的个人引导页]]></title>
+        <id>https://blog.qingyundrive.top/post/gerenyindaoye/</id>
+        <link href="https://blog.qingyundrive.top/post/gerenyindaoye/">
+        </link>
+        <updated>2023-01-13T02:19:13.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="开始">开始</h1>
+<p>从别人那里白嫖来的。效果还不错，自适应效果。<br>
+自己看图：<br>
+<img src="https://www.qingyundrive.top:83/upload/2022/5/4/5d2529ab-12af-405f-8786-991890d8f717.png" alt="图片名称" loading="lazy"></p>
+<h2 id="源码下载">源码下载</h2>
+<p>https://www.qingyundrive.top:9996/archives/26/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[群晖NAS使用DDNS-GO脚本]]></title>
+        <id>https://blog.qingyundrive.top/post/qun-hui-nas-shi-yong-ddns-go-jiao-ben/</id>
+        <link href="https://blog.qingyundrive.top/post/qun-hui-nas-shi-yong-ddns-go-jiao-ben/">
+        </link>
+        <updated>2023-01-12T08:46:46.000Z</updated>
+        <content type="html"><![CDATA[<!--- toc --->
+<ul>
+<li><a href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">准备工作</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B%E5%AE%9E%E8%B7%B5">开始实践</a></li>
+<li><a href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98">常见问题</a></li>
+<li><a href="#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B">视频教程</a></li>
+</ul>
+<!--- toc --->
+<hr>
+<h1 id="准备工作">准备工作</h1>
+<ul>
+<li>一台装着群晖的NAS</li>
+<li>电脑</li>
+<li>脑子</li>
+<li>手</li>
+</ul>
+<hr>
+<h1 id="开始实践">开始实践</h1>
+<ol>
+<li>打开NAS的web管理界面并登陆<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211152308947.png" alt="" loading="lazy"></li>
+<li>点击控制面板-连接性<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211153034825.png" alt="" loading="lazy"></li>
+<li>点击终端机和SNMP<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211158243251.png" alt="" loading="lazy"></li>
+<li>将SSH功能打开并点击应用<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211158557275.png" alt="" loading="lazy"></li>
+<li>打开SSH连接软件连接群晖NAS(<strong>用户名和密码就是WEB登录密码</strong>)<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-21/2301211159473638.png" alt="" loading="lazy"><br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221200482495.png" alt="" loading="lazy"></li>
+<li>使用命令：进入ROOT用户（密码跟普通用户密码相同）</li>
+</ol>
+<pre><code>sudo -i
+</code></pre>
+<p><img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221201203493.png" alt="" loading="lazy"><br>
+7. 我们创建专用文件夹来保存DDNS</p>
+<pre><code>mkdir -p ./home
+</code></pre>
+<p><img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221201567344.png" alt="" loading="lazy"><br>
+8. 进入新创建的文件夹</p>
+<pre><code>cd ./home
+</code></pre>
+<p><img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221210478754.png" alt="" loading="lazy"><br>
+9. 在此目录下载DDNS-GO压缩包（这里只提供X86_64版本）</p>
+<pre><code>wget https://nav.qingyundrive.top/ddns-go_4.4.1_Linux_x86_64.tar.gz
+</code></pre>
+<p><img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221212193721.png" alt="" loading="lazy"><br>
+10. 在此目录下解压DDNS-GO压缩包</p>
+<pre><code>tar -zxvf ddns-go_4.4.1_Linux_x86_64.tar.gz
+</code></pre>
+<p><img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221212459508.png" alt="" loading="lazy"><br>
+11. 安装DDNS-GO服务——直至出现安装完成提示</p>
+<pre><code>sudo ./ddns-go -s install
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221213126829.png" alt="" loading="lazy"></figure>
+<ol>
+<li>配置DDNS-GO<br>
+详情可看:https://blog.qingyundrive.top/post/ddns-go-/<br>
+DDNS-GO视频教程：https://www.bilibili.com/video/BV1qe4y137Ns/</li>
+</ol>
+<h1 id="视频教程">视频教程</h1>
+<p>b站视频：https://www.bilibili.com/video/BV15M411h7om/</p>
+<iframe src="//player.bilibili.com/player.html?bvid=BV15M411h7om&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="false"> </iframe>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[推荐3个效率小工具]]></title>
+        <id>https://blog.qingyundrive.top/post/Small-tools/</id>
+        <link href="https://blog.qingyundrive.top/post/Small-tools/">
+        </link>
+        <updated>2023-01-11T04:30:43.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="引言">引言</h1>
+<p>俗话说“工欲善其事，必先利其器”，真的一点没错，用对工具，你的幸福指数会立马提升。这些小工具既包括客户端软件、APP，也有网站、插件等，可以大幅度提升。<br>
+<strong>1. Notion</strong><br>
+Notion是一款笔记类应用，和印象笔记、onenote类似，但它区别于其他产品的特点在于：简洁、不打扰、模块化。并且notion个人免费版除了上传文件大小限制外，拥有全部的产品功能，没有任何广告的打扰，可以心无旁骛地记录。现在notion在往团队协作方向发展，团队和公司版本是需要付费的。对于这款软件来说最重要的特征，也是区别其他产品最大的差异在于它的模块化内容结构，notion是以模块为基本单位，可以在一篇内容里构建文档、表格、视频、音频、网页、数据库等等，涵盖几乎所有的笔记类型。同时，notion的markdown功能支持即时渲染，支持图片云存储，直接覆盖了Typora的功能。</p>
+<figure data-type="image" tabindex="1"><img src="https://www.qingyundrive.top:83/upload/2022/5/5/86495b19-f5e9-442c-afd3-e3ecde1ad148.png" alt="图片名称" loading="lazy"></figure>
+<h2 id="2搜索工具everything">2.搜索工具Everything</h2>
+<p>对于电脑重度使用者来说，每天有大量的文件处理，查找起来是一个非常头疼的事，windows自带的搜索功能无法支持全量检索和路径追踪，用起来也不方便。Everything很好的解决了这个问题，帮了我很多忙。Everything是一款轻量级的文件搜索工具，占用内存小（不到2MB），搜索速度快（秒级响应），文件检索功能强。<br>
+你只需要在搜索框输出你想要查询文件的关键字，便能瞬间得到相应，出现关键字相关的各种文件。搜索还支持正则表达式，以及各种高级搜索设置。Everything之所以这么快，是因为它只检索电脑中的文件名及文件夹名，快速建立数据库，索引一百万份文件一般只需要一分钟。而当你关键字搜索时，是瞬时相应。我基本上每次换电脑都必装Everything，关键它还是免费的，可以去站长网盘下载。<br>
+<img src="https://www.qingyundrive.top:83/upload/2022/5/5/345816cc-c1d4-414c-aefc-d71b0f0e6bfd.png" alt="图片名称" loading="lazy"></p>
+<h3 id="3-snipaste">3. Snipaste</h3>
+<p>Snipaste是一款截图软件与Windows自带截图功能不同在windows自带的截图工具灵活性差，且无法在截图过程中做尺寸调整和增加标记。微信和QQ的截图功能一方面需要联网在线才可以用，另一方面标注功能比较有限。Snipaste完美解决了上面的问题，它离线操作、无需安装、支持截图贴图、标注功能强大、支持元素截取、支持取色等等。</p>
+<p><img src="https://www.qingyundrive.top:83/upload/2022/5/5/567507c6-be4d-478d-bb2a-1b22dc1600b2.png" alt="图片名称" loading="lazy"><br>
+最让人惊喜的是Snipaste有贴图的功能，当你按下【F1】启动截图，调整想要的截图范围，然后按下【F3】便可以将截图“钉”在桌面上，然后可以对该贴图进行个性化标注。贴图的使用场景非常多，比如可以将重要的文本资料贴在桌面上随时查阅、可以拼接电影台词、可以遮挡字幕等。<br>
+<img src="https://www.qingyundrive.top:83/upload/2022/5/5/bf830f60-ce2b-48e2-b27c-c45bfa48183a.png" alt="图片名称" loading="lazy"></p>
+<p>Snipaste的取色功能同样非常实用，是PPT设计者的福音。当你在网页上看到一个喜欢的颜色，想知道它的RGB值，用到自己的作品里。这时候可以按下【F1】启动Snipaste，然后把鼠标箭头放在要吸取的颜色上，按下【C】键，这个颜色的RGB值便存在了剪切板里。最后再按下【F3】，桌面上便会出现如下的颜色信息，包含RGB、HEX等。<br>
+<img src="https://www.qingyundrive.top:83/upload/2022/5/5/14a8bb45-eaa4-4e89-9817-48fe8e0d1bef.png" alt="图片名称" loading="lazy"></p>
+<h4 id="结语">结语</h4>
+<p>文件下载地址:https://www.qingyundrive.top:9996/archives/35/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何使用Cloudflare隐藏您的端口号[失效]]]></title>
+        <id>https://blog.qingyundrive.top/post/cloudflare-Hidden-port/</id>
+        <link href="https://blog.qingyundrive.top/post/cloudflare-Hidden-port/">
+        </link>
+        <updated>2023-01-10T02:28:56.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="使用目的">使用目的</h1>
+<p>让你的云服务器的IP不再暴露在公网并且在某些场合需要端口号时可直接忽略。</p>
+<!-- TOC -->
+<ul>
+<li><a href="#%E4%BD%BF%E7%94%A8%E7%9B%AE%E7%9A%84">使用目的</a>
+<ul>
+<li><a href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">准备工作</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B">开始</a></li>
+<li><a href="#%E6%9F%A5%E9%AA%8C%E8%AE%B0%E5%BD%95%E7%94%9F%E6%95%88">查验记录生效</a></li>
+<li><a href="#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B">视频教程</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h1 id="准备工作">准备工作</h1>
+<h2 id="所需材料">所需材料</h2>
+<ul>
+<li>手</li>
+<li>脑子</li>
+<li>域名</li>
+<li>云服务器（用运营商的家宽也可以就是不能藏IP）</li>
+<li>Cloudflare账号</li>
+</ul>
+<h1 id="开始">开始</h1>
+<ul>
+<li>1.打开我们的云服务器找到自己的公网IP并且去Cloudflare添加A解析，解析到我们的服务器<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221214067616.png" alt="" loading="lazy"></li>
+<li>2.等待PING出IP地址为泛播Cloudflare即可（不行的话按住WIN+R，输入CMD 在里面输入IPCONFIG /FLUSHDNS 后重试）<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221214467012.png" alt="" loading="lazy"></li>
+<li>3.我们回到Cloudflare添加SRV解析，后面的权重抄下就行了，至于协议TCP/UDP自己选<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221215578775.png" alt="" loading="lazy"></li>
+<li>4.完成添加记录后等待记录值生效即可！（我等了1个小时）</li>
+</ul>
+<h1 id="查验记录生效">查验记录生效</h1>
+<ul>
+<li>按住WIN+R打开cmd</li>
+<li>输入nslookup -q=srv +你的记录(红圈里框起来的)<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221216227452.png" alt="" loading="lazy"></li>
+<li>如果不行请更换DNS重试！直至出现下图代表记录已经生效：<br>
+<img src="https://img.qingyundrive.top:2053/upload/2023-01-22/2301221217062623.png" alt="" loading="lazy"></li>
+</ul>
+<h1 id="视频教程">视频教程</h1>
+<p>https://www.bilibili.com/video/BV1kd4y1j7Fn/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[html跳转页面]]></title>
+        <id>https://blog.qingyundrive.top/post/html-tiao-zhuan-ye-mian/</id>
+        <link href="https://blog.qingyundrive.top/post/html-tiao-zhuan-ye-mian/">
+        </link>
+        <updated>2023-01-09T08:11:02.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="源码声名">源码声名</h1>
+<p>此源码来自于网络资源收集，非原创资源，所造成的后果由下载者承担</p>
+<h1 id="源码预览">源码预览</h1>
+<figure data-type="image" tabindex="1"><img src="https://www.qingyundrive.top:9996/usr/uploads/2022/07/3262097219.png" alt="l67j7pm8.png" loading="lazy"></figure>
+<h2 id="下载地址">下载地址</h2>
+<p>自营云盘下载:  <a href="https://www.qingyundrive.top:9996/archives/96/">前往下载</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[DDNS-GO使用教程]]></title>
+        <id>https://blog.qingyundrive.top/post/ddns-go-/</id>
+        <link href="https://blog.qingyundrive.top/post/ddns-go-/">
+        </link>
+        <updated>2023-01-08T11:42:51.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="ddns-go">ddns-go</h1>
+<p>自动获得你的公网 IPv4 或 IPv6 地址，并解析到对应的域名服务。</p>
+<!-- TOC -->
+<ul>
+<li><a href="#ddns-go">ddns-go</a>
+<ul>
+<li><a href="#%E7%89%B9%E6%80%A7">特性</a></li>
+<li><a href="#%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%BD%BF%E7%94%A8">系统中使用</a></li>
+<li><a href="#docker%E4%B8%AD%E4%BD%BF%E7%94%A8">Docker中使用</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8ipv6">使用IPv6</a></li>
+<li><a href="#webhook">Webhook</a></li>
+<li><a href="#callback">Callback</a></li>
+<li><a href="#%E7%95%8C%E9%9D%A2">界面</a></li>
+<li><a href="#%E7%95%8C%E9%9D%A2">视频教程</a></li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="特性">特性</h2>
+<ul>
+<li>支持Mac、Windows、Linux系统，支持ARM、x86架构</li>
+<li>支持的域名服务商 <code>Alidns(阿里云)</code> <code>Dnspod(腾讯云)</code> <code>Cloudflare</code> <code>华为云</code> <code>Callback</code> <code>百度云</code> <code>porkbun</code> <code>GoDaddy</code> <code>Google Domains</code></li>
+<li>支持接口/网卡获取IP</li>
+<li>支持以服务的方式运行</li>
+<li>默认间隔5分钟同步一次</li>
+<li>支持多个域名同时解析，公司必备</li>
+<li>支持多级域名</li>
+<li>网页中配置，简单又方便，可设置 <code>登录用户名和密码</code> / <code>禁止从公网访问</code></li>
+<li>网页中方便快速查看最近50条日志，不需要跑docker中查看</li>
+<li>支持webhook通知</li>
+<li>支持TTL</li>
+<li>支持部分dns服务商传递自定义参数，实现地域解析等功能</li>
+</ul>
+<h2 id="系统中使用">系统中使用</h2>
+<ul>
+<li>下载并解</li>
+<li>双击运行, 如没有找到配置, 程序自动打开</li>
+<li>[可选] 安装服务
+<ul>
+<li>Mac/Linux: <code>sudo ./ddns-go -s install</code></li>
+<li>Win(以管理员打开cmd): <code>.\ddns-go.exe -s install</code></li>
+<li>安装服务也支持 <code>-l</code>监听地址 <code>-f</code>同步间隔时间(秒) <code>-c</code>自定义配置文件路径 <code>-noweb</code>不启动web服务 <code>-skipVerify</code>跳过证书验证</li>
+</ul>
+</li>
+<li>[可选] 服务卸载
+<ul>
+<li>Mac/Linux: <code>sudo ./ddns-go -s uninstall</code></li>
+<li>Win(以管理员打开cmd): <code>.\ddns-go.exe -s uninstall</code></li>
+</ul>
+</li>
+<li>[可选] 支持启动带参数 <code>-l</code>监听地址 <code>-f</code>同步间隔时间(秒) <code>-c</code>自定义配置文件路径 <code>-noweb</code>不启动web服务 <code>-skipVerify</code>跳过证书验证。如：<code>./ddns-go -l :9877 -f 600 -c /Users/name/ddns-go.yaml</code></li>
+</ul>
+<h2 id="docker中使用">Docker中使用</h2>
+<ul>
+<li>
+<p>挂载主机目录, 使用docker host模式。可把 <code>/opt/ddns-go</code> 替换为你主机任意目录, 配置文件为隐藏文件</p>
+<pre><code class="language-bash">docker run -d --name ddns-go --restart=always --net=host -v /opt/ddns-go:/root jeessy/ddns-go
+</code></pre>
+</li>
+<li>
+<p>在浏览器中打开<code>http://主机IP:9876</code>，修改你的配置，成功</p>
+</li>
+<li>
+<p>[可选] 支持启动带参数 <code>-l</code>监听地址 <code>-f</code>间隔时间(秒)</p>
+<pre><code class="language-bash">docker run -d --name ddns-go --restart=always --net=host -v /opt/ddns-go:/root jeessy/ddns-go -l :9877 -f 600
+</code></pre>
+</li>
+<li>
+<p>[可选] 不使用docker host模式</p>
+<pre><code class="language-bash">docker run -d --name ddns-go --restart=always -p 9876:9876 -v /opt/ddns-go:/root jeessy/ddns-go
+</code></pre>
+</li>
+</ul>
+<h2 id="使用ipv6">使用IPv6</h2>
+<ul>
+<li>前提：你的电脑或终端能正常获取IPv6，并能正常访问IPv6</li>
+<li>Windows/Mac：推荐 <a href="#%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%BD%BF%E7%94%A8">系统中使用</a>，Windows/Mac桌面版的docker不支持<code>--net=host</code></li>
+<li>群晖：
+<ul>
+<li>套件中心下载docker并打开</li>
+<li>注册表中搜索<code>ddns-go</code>并下载</li>
+<li>映像 -&gt; 选择<code>jeessy/ddns-go</code> -&gt; 启动 -&gt; 高级设置 -&gt; 网络中勾选<code>使用与 Docker Host 相同的网络</code>，高级设置中勾选<code>启动自动重新启动</code></li>
+<li>在浏览器中打开<code>http://群晖IP:9876</code>，修改你的配置，成功</li>
+</ul>
+</li>
+<li>Linux的x86或arm架构，推荐使用Docker的<code>--net=host</code>模式。参考 <a href="#Docker%E4%B8%AD%E4%BD%BF%E7%94%A8">Docker中使用</a></li>
+<li>虚拟机中使用有可能正常获取IPv6，但不能正常访问IPv6</li>
+</ul>
+<h2 id="webhook">Webhook</h2>
+<ul>
+<li>
+<p>支持webhook, 域名更新成功或不成功时, 会回调填写的URL</p>
+</li>
+<li>
+<p>支持的变量</p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#{ipv4Addr}</td>
+<td>新的IPv4地址</td>
+</tr>
+<tr>
+<td>#{ipv4Result}</td>
+<td>IPv4地址更新结果: <code>未改变</code> <code>失败</code> <code>成功</code></td>
+</tr>
+<tr>
+<td>#{ipv4Domains}</td>
+<td>IPv4的域名，多个以<code>,</code>分割</td>
+</tr>
+<tr>
+<td>#{ipv6Addr}</td>
+<td>新的IPv6地址</td>
+</tr>
+<tr>
+<td>#{ipv6Result}</td>
+<td>IPv6地址更新结果: <code>未改变</code> <code>失败</code> <code>成功</code></td>
+</tr>
+<tr>
+<td>#{ipv6Domains}</td>
+<td>IPv6的域名，多个以<code>,</code>分割</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>RequestBody为空GET请求，不为空POST请求</p>
+</li>
+<li>
+<p>Server酱: <code>https://sctapi.ftqq.com/[SendKey].send?title=主人IPv4变了#{ipv4Addr},域名更新结果:#{ipv4Result}</code></p>
+</li>
+<li>
+<p>Bark: <code>https://api.day.app/[YOUR_KEY]/主人IPv4变了#{ipv4Addr},域名更新结果:#{ipv4Result}</code></p>
+</li>
+<li>
+<p>钉钉:</p>
+<ul>
+<li>钉钉电脑端 -&gt; 群设置 -&gt; 智能群助手 -&gt; 添加机器人 -&gt; 自定义</li>
+<li>只勾选 <code>自定义关键词</code>, 输入的关键字必须包含在RequestBody的content中, 如：<code>你的公网IP变了</code></li>
+<li>URL中输入钉钉给你的 <code>Webhook地址</code></li>
+<li>RequestBody中输入 <code>{&quot;msgtype&quot;: &quot;markdown&quot;,&quot;markdown&quot;: {&quot;title&quot;:&quot;你的公网IP变了&quot;,&quot;text&quot;: &quot;#### 你的公网IP变了 \n - IPV4地址：#{ipv4Addr} \n - 域名更新结果：#{ipv4Result} \n&quot;}}</code></li>
+</ul>
+</li>
+<li>
+<p>飞书：</p>
+<ul>
+<li>飞书电脑端 -&gt; 群设置 -&gt; 添加机器人 -&gt; 自定义机器人</li>
+<li>安全设置只勾选 <code>自定义关键词</code>, 输入的关键字必须包含在RequestBody的content中, 如：<code>你的公网IP变了</code></li>
+<li>URL中输入飞书给你的 <code>Webhook地址</code></li>
+<li>RequestBody中输入 <code>{&quot;msg_type&quot;: &quot;post&quot;,&quot;content&quot;: {&quot;post&quot;: {&quot;zh_cn&quot;: {&quot;title&quot;: &quot;你的公网IP变了&quot;,&quot;content&quot;: [[{&quot;tag&quot;: &quot;text&quot;,&quot;text&quot;: &quot;IPV4地址：#{ipv4Addr}&quot;}] , [{&quot;tag&quot;: &quot;text&quot;,&quot;text&quot;: &quot;域名更新结果：#{ipv4Result}&quot;}]]}}}}</code></li>
+</ul>
+</li>
+<li>
+<p>Telegram: <a href="https://github.com/WingLim/ddns-telegram-bot">ddns-telegram-bot</a></p>
+</li>
+<li>
+<p>plusplus 推送加：</p>
+<ul>
+<li><a href="https://www.pushplus.plus/push1.html">获取token</a></li>
+<li>URL中输入 <code>https://www.pushplus.plus/send</code></li>
+<li>RequestBody中输入 <code>{&quot;token&quot;:&quot;your token&quot;,&quot;title&quot;:&quot;你的公网IP变了&quot;,&quot;content&quot;:&quot;你的公网IP变了 \n - IPV4地址：#{ipv4Addr} \n - 域名更新结果：#{ipv4Result} \n&quot;}</code></li>
+</ul>
+</li>
+<li>
+<p>Discord:</p>
+<ul>
+<li>Discord任意客户端 -&gt; 伺服器 -&gt; 频道设置 -&gt; 整合 -&gt; 查看Webhook -&gt; 新Webhook -&gt; 复制Webhook网址</li>
+<li>URL中输入Discord复制的 <code>Webhook网址</code></li>
+<li>RequestBody中输入 <code>{&quot;content&quot;:&quot;域名 #{ipv4Domains} 动态解析 #{ipv4Result}.&quot;,&quot;embeds&quot;:[{&quot;description&quot;:&quot;#{ipv4Domains} 的动态解析 #{ipv4Result}, IP: #{ipv4Addr}&quot;,&quot;color&quot;:15258703,&quot;author&quot;:{&quot;name&quot;:&quot;DDNS&quot;},&quot;footer&quot;:{&quot;text&quot;:&quot;DDNS #{ipv4Result}&quot;}}]}</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="callback">Callback</h2>
+<ul>
+<li>
+<p>通过自定义回调可支持更多的第三方DNS服务商</p>
+</li>
+<li>
+<p>配置的域名有几行, 就会回调几次</p>
+</li>
+<li>
+<p>支持的变量</p>
+<table>
+<thead>
+<tr>
+<th>变量名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#{ip}</td>
+<td>新的IPv4/IPv6地址</td>
+</tr>
+<tr>
+<td>#{domain}</td>
+<td>当前域名</td>
+</tr>
+<tr>
+<td>#{recordType}</td>
+<td>记录类型 <code>A</code>或<code>AAAA</code></td>
+</tr>
+<tr>
+<td>#{ttl}</td>
+<td>ttl</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>RequestBody为空GET请求，不为空POST请求</p>
+</li>
+</ul>
+<h2 id="界面">界面</h2>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/jeessy2/ddns-go/master/ddns-web.png" alt="screenshots" loading="lazy"></figure>
+<h2 id="视频教程">视频教程</h2>
+<p>https://www.bilibili.com/video/BV1qe4y137Ns/</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[世界，你好！我们重新开始！]]></title>
+        <id>https://blog.qingyundrive.top/post/start/</id>
+        <link href="https://blog.qingyundrive.top/post/start/">
+        </link>
+        <updated>2023-01-08T11:16:18.000Z</updated>
+        <content type="html"><![CDATA[<h1>发展历程</h1>
+<artile>本站发展自2018年以来更换过多次服务器，曾尝试过资源站，博客，vps代理商，云盘等；<strong>没有不离别的青春,没有不散场的宴席。</strong>是的，就在2020年初，疫情爆发，导致站长的服务器第一次失联！随后站长注册了qingyang.cr.cx二级域名并在阿里云重新购买了服务器，最终由于服务器续费过高，超出站长预算范围故告一段落。<p>在2021年，站长又买了服务器，而且注册了一个.cn的域名，结果才用了3个月人家跑路了！！！数据再一次无了！</p>
+<p>2022年，站长决定继续搭建网站——完完全全用自己的服务器；这也造就了服务更加稳定！站长并不是专业整这方面的，所以你懂得，出点小问题在所难免！请来访的各位一起前往我的主站吧
+<a href="https://www.qingyundrive.top:9996/">点我前往主站站点</a>]]></content>
+    </entry>
+</feed>
